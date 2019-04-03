@@ -205,6 +205,7 @@ button.button-buy, a.button-buy {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 410px;
     h5 {
         margin-bottom: $global-gutter * 2;
     }
