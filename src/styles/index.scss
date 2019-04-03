@@ -1,5 +1,6 @@
 
 $global-gutter: 8px;
+$global-radius: 10px;
 
 $font-family-1: 'Lato', 'Arial', sans-serif;
 
@@ -44,7 +45,8 @@ h2 {
     text-align: center;
 }
 h3 {
-    margin-top: $global-gutter * 4;;
+    margin-top: $global-gutter * 4;
+    text-transform: uppercase;
 }
 
 .site-header {
@@ -156,12 +158,12 @@ button.button-buy, a.button-buy {
     font-weight: bold;
     background: $color-green;
     color: #fff !important;
-    border-radius: 50px;
-    box-shadow: 0px 4px 7px #00000052;
+    border-radius: $global-radius;
     width: fit-content;
     display: block;
     cursor: pointer;
     margin: $global-gutter * 4 auto;
+    line-height: 1.5;
     &:hover{
         @include rainbow;
         animation-duration: 3.5s;
@@ -191,9 +193,12 @@ button.button-buy, a.button-buy {
     background: $color-orange;
 }
 
-.content-section__testimonials {
+.content-section__testimonials, footer {
     background: #343434;
     color: #fff;
+}
+.content-section__video {
+    margin-top: 40px;
 }
 
 .testimonial {
@@ -223,24 +228,29 @@ button.button-buy, a.button-buy {
     margin-right: auto!important;
 }
 
-.content-section-heading  {
-//     white-space: nowrap;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-}
-
-
 .boxes-buy {
     margin-bottom: $global-gutter * 4;
 }
 .box-buy {
     padding: 16px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: $global-radius;
     text-align: center;
     margin-bottom: $global-gutter * 2;
 }
 
 .box-buy__title {
     font-size: 18px;
+}
+
+footer {
+    padding: $global-gutter * 2;
+    p {
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+    a {
+        color: #fff;
+    }
 }
