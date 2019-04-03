@@ -22,13 +22,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
     <nav class="site-header">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2 d-none d-md-inline-block" href="#book">O livro</a>
-            <a class="py-2 d-none d-md-inline-block" href="#author">Autor</a>
-            <a class="py-2 d-none d-md-inline-block" href="#testimonials">Depoimentos</a>
+        <div class="container d-flex flex-row justify-content-between">
+            <a class="py-2 d-md-inline-block" href="#book">O livro</a>
+            <a class="py-2 d-md-inline-block" href="#author">Autor</a>
+            <a class="py-2 d-md-inline-block" href="#testimonials">Depoimentos</a>
         </div>
     </nav>
     <div class="container-fluid">
@@ -42,9 +43,9 @@
         <div class="container">
             <div class="row">
                 <p class="text-highlight">Você é capaz de sentir as cores que germinam sob nossas peles? É capaz de ter empatia com o que outros corações sentem?</p>
-                <p class="text-highlight">Cores sob nossas peles, de Noé Filho, é uma reunião de doze contos com personagens lésbicas, gays, bissexuais e transsexuais como protagonistas.</p> 
-                <p class="text-highlight"> Vislumbra ser um exercício de empatia para que todos e todas nós possamos refletir sobre os dilemas e desafios que pessoas da população LGBT experienciam.</p>        
-            </div> 
+                <p class="text-highlight">Cores sob nossas peles, de Noé Filho, é uma reunião de doze contos com personagens lésbicas, gays, bissexuais e transsexuais como protagonistas.</p>
+                <p class="text-highlight"> Vislumbra ser um exercício de empatia para que todos e todas nós possamos refletir sobre os dilemas e desafios que pessoas da população LGBT experienciam.</p>
+            </div>
         </div>
         <div class="rainbow">
             <div class="rainbow-red col-2"></div>
@@ -60,24 +61,39 @@
             <div class="row">
                 <div class="content-section-heading mb-5 col-12">
                     <h2>Sobre o livro</h2>
-                </div> 
-                <div class="col-lg-6 col-md-12">
+                </div>
+                <div class="col-lg-4 col-md-12">
                     <img class="book-cover" src="<%= require('./src/assets/book-cover.png') %>"/>
                 </div>
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-8 col-md-12">
                     <div class="row">
                         <div class="col-12">
-                            <h3>Como comprar</h3>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <p class="box-section__title">Preço</p>
-                                    <p class="box-section__description">R$ 30 + Frete</p>
+                            <div class="row boxes-buy">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="box-buy">
+                                        <p class="box-buy__title">E-book</p>
+                                        <a class="button-buy" href="https://www.amazon.com.br/dp/B07PXXNZXC/ref=cm_sw_r_cp_ep_dp_t7aPCbKWDXD80" target="_blank">Comprar por R$ 9,99</a>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="box-buy">
+                                        <p class="box-buy__title">Livro Físico</p>
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                                            <!-- <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!"> -->
+                                            <button class="button-buy" type="submit" name="submit">Comprar por R$ 30 + Frete</button>
+                                            <!-- <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1"> -->
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <p class="box-section__title">E-mail</p>
                                     <p class="box-section__description"><a href="mailto:noerhfilho@gmail.com">noerhfilho@gmail.com</a></p>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <p class="box-section__title">Whatsapp</p>
                                     <p class="box-section__description">+55 86 99802.6952 (<a href="//bit.ly/whatsappnoerhfilho" target="_blank">bit.ly/whatsappnoerhfilho</a>)</p>
                                 </div>
@@ -86,57 +102,56 @@
                         <div class="col-12">
                             <h3>Ficha técnica</h3>
                             <div class="row">
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                     <p class="box-section__title">Revisão</p>
                                     <p class="box-section__description">Paulo Narley <br/> Alisson Carvalho</p>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                     <p class="box-section__title">Capa</p>
                                     <p class="box-section__description">Carlos César <br/> Mônica Alves</p>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                     <p class="box-section__title">Projeto Gráfico</p>
                                     <p class="box-section__description">Mônica Alves</p>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                     <p class="box-section__title">Ilustrações</p>
                                     <p class="box-section__description">Carlos César</p>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                     <p class="box-section__title">Editora</p>
                                     <p class="box-section__description">Quimera</p>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                     <p class="box-section__title">Ano</p>
                                     <p class="box-section__description">2019</p>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                     <p class="box-section__title">Idioma</p>
                                     <p class="box-section__description">Português</p>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                     <p class="box-section__title">ISBN</p>
                                     <p class="box-section__description">?</p>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                     <p class="box-section__title">Dimensões / Peso</p>
                                     <p class="box-section__description">15 x 15 x ?? cm / ?g</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                <input type="hidden" name="cmd" value="_s-xclick">
-                                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-                                <!-- <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!"> -->
-                                <button class="button-buy" type="submit" name="submit">Comprar por R$ 30</button>
-                                <!-- <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1"> -->
-                            </form>
-                        </div>
-                    </div>      
-                </div>   
-            </div> 
-            
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="rainbow">
+            <div class="rainbow-red col-2"></div>
+            <div class="rainbow-orange col-2"></div>
+            <div class="rainbow-yellow col-2"></div>
+            <div class="rainbow-green col-2"></div>
+            <div class="rainbow-blue col-2"></div>
+            <div class="rainbow-purple col-2"></div>
         </div>
     </section>
     <section class="content-section  content-section__author" id="author">
@@ -156,12 +171,39 @@
                         É formado em Administração, além disso é o Idealizador e Coordenador da Geleia Total. Produtor, escritor, bairrista e amante da arte. Noé filho divide-se entre a escrita de crônicas, críticas e a ficção. Como produtor, desenvolve trabalho de criação e direção artística, experimentando a criação em diversas artes.
                         <br>
                         <br>
-                        Entre em contato por <a class="regularlink" href="https://www.instagram.com/noerhfilho/">Instagram</a>, <a class="regularlink" href="https://twitter.com/noerhfilho">Twitter</a> or <a class="regularlink" href="https://www.facebook.com/noerhfilho">Facebook</a>.
+                         <ul class="author__social">
+                             <li>
+                                <a class="regularlink" href="https://www.instagram.com/noerhfilho/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                             </li>
+                             <li>
+                                <a class="regularlink" href="https://www.facebook.com/noerhfilho">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                             </li>
+                             <li>
+                                <a class="regularlink" href="https://twitter.com/noerhfilho">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                             </li>
+
+                             <li>
+                                <a class="regularlink" href="https://www.youtube.com/user/noerhfilho/">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                             </li>
+                             <li>
+                                <a class="regularlink" href="https://linktr.ee/noerhfilho">
+                                    <i class="fas fa-tree"></i>
+                                </a>
+                             </li>
+                         </ul>
                         <br>
                         <br>
-                    </div> 
+                    </div>
                 </div>
-            </div>  
+            </div>
         </div>
     </section>
     <section class="content-section  content-section__testimonials" id="testimonials">
@@ -213,7 +255,7 @@
                     <p class="text-faded mb-0" style="color: #fff;">Autor de “Ressuscito na cidade suicida”</p>
                     <p class="text-faded mb-0">"Descontruir preconceitos, repensar a diversidade, reorganizar discursos de dignidade humana: eis a temática e a magia. Noé descobriu como atingir esses objetivos dentro da simplicidade. Noé Filho e Carlos César me mostraram o arco-íris que sempre fui capaz de ler, mas que precisava melhorar a interpretação."</p>
                 </div>
-            </div>  
+            </div>
         </div>
     </section>
 
@@ -227,8 +269,8 @@
     gtag('config', 'UA-101423651-2');
 </script> -->
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 
 <!-- DEMO Project page content ENDS -->
 </body>
