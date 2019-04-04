@@ -1,4 +1,3 @@
-
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
@@ -8,7 +7,9 @@
 $global-gutter: 8px;
 $global-radius: 10px;
 
-$font-family-1: 'Lato', 'Arial', sans-serif;
+$font-family-1: 'Lato',
+'Arial',
+sans-serif;
 
 $color-red: #e73a37;
 $color-orange: #f4962f;
@@ -18,25 +19,29 @@ $color-blue: #5d63ac;
 $color-purple: #b85098;
 
 // Mixins
+@keyframes slide {
+    0% {
+        background-position-x: 0%;
+    }
 
-@mixin rainbow(){
-  background: repeating-linear-gradient(-45deg,red 0%, yellow 7.14%, rgb(0,255,0) 14.28%, rgb(0,255,255) 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-	background-size:600vw 600vw;
-	-webkit-animation:'slide' 10s infinite linear forwards;
+    100% {
+        background-position-x: 600vw;
+    }
 }
-@keyframes slide{
-  0%{
-    background-position-x: 0%;
-  }
-  100%{
-    background-position-x: 600vw;
-  }
+
+@mixin rainbow() {
+    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0, 255, 0) 14.28%, rgb(0, 255, 255) 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+    background-size: 600vw 600vw;
+    -webkit-animation: 'slide' 10s infinite linear forwards;
+    animation: 'slide' 10s infinite linear forwards;
 }
+
 
 
 // Mixins
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     font-size: 100%;
@@ -50,6 +55,7 @@ h2 {
     font-weight: 900;
     text-align: center;
 }
+
 h3 {
     margin-top: $global-gutter * 4;
     text-transform: uppercase;
@@ -61,6 +67,7 @@ h3 {
     z-index: 10;
     width: 100%;
     top: 0;
+
     a {
         color: #999;
         transition: ease-in-out color .15s;
@@ -76,21 +83,27 @@ h3 {
     flex-grow: 1;
     position: absolute;
     bottom: 0;
+
     .rainbow-red {
         background: $color-red;
     }
+
     .rainbow-orange {
         background: $color-orange;
     }
+
     .rainbow-yellow {
         background: $color-yellow;
     }
+
     .rainbow-green {
         background: $color-green;
     }
+
     .rainbow-blue {
         background: $color-blue;
     }
+
     .rainbow-purple {
         background: $color-purple;
     }
@@ -99,6 +112,7 @@ h3 {
 .author {
     float: left;
     width: 20%;
+
     img {
         border-radius: 100px;
         width: 100%;
@@ -110,6 +124,7 @@ h3 {
 .lead {
     float: right;
     width: 75%;
+
     a {
         color: #000000ba;
         font-weight: bold;
@@ -123,10 +138,12 @@ h3 {
     flex-direction: row;
     padding: 0;
     flex-wrap: wrap;
+
     li {
         margin-right: $global-gutter * 4;
         margin-bottom: $global-gutter * 2;
     }
+
     .fab {
         font-size: 36px;
     }
@@ -158,7 +175,8 @@ h3 {
     font-size: 14px;
 }
 
-button.button-buy, a.button-buy {
+button.button-buy,
+a.button-buy {
     padding: $global-gutter * 2 $global-gutter * 6;
     font-size: 18px;
     font-weight: bold;
@@ -170,7 +188,8 @@ button.button-buy, a.button-buy {
     cursor: pointer;
     margin: $global-gutter * 4 auto;
     line-height: 1.5;
-    &:hover{
+
+    &:hover {
         @include rainbow;
         animation-duration: 3.5s;
         box-shadow: 0px 4px 15px #00000052;
@@ -178,7 +197,8 @@ button.button-buy, a.button-buy {
     }
 }
 
-.box-section__title, .box-buy__title {
+.box-section__title,
+.box-buy__title {
     margin-bottom: 0;
     font-weight: bold;
     text-transform: uppercase;
@@ -199,10 +219,12 @@ button.button-buy, a.button-buy {
     background: $color-orange;
 }
 
-.content-section__testimonials, footer {
+.content-section__testimonials,
+footer {
     background: #343434;
     color: #fff;
 }
+
 .content-section__video {
     margin-top: 40px;
 }
@@ -212,12 +234,16 @@ button.button-buy, a.button-buy {
     flex-direction: column;
     align-items: center;
     min-height: 410px;
+
     h5 {
         margin-bottom: $global-gutter * 2;
     }
-    h5, p {
+
+    h5,
+    p {
         text-align: center;
     }
+
     img {
         margin-bottom: $global-gutter * 2;
         width: 130px;
@@ -227,17 +253,18 @@ button.button-buy, a.button-buy {
 }
 
 .text-faded {
-    color: rgba(255,255,255,.7)
+    color: rgba(255, 255, 255, .7)
 }
 
 .mx-auto {
-    margin-left: auto!important;
-    margin-right: auto!important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .boxes-buy {
     margin-bottom: $global-gutter * 4;
 }
+
 .box-buy {
     padding: 16px;
     border: 1px solid #ccc;
@@ -252,11 +279,13 @@ button.button-buy, a.button-buy {
 
 footer {
     padding: $global-gutter * 2;
+
     p {
         text-align: center;
         margin-bottom: 0;
         font-size: 12px;
     }
+
     a {
         color: #fff;
     }
