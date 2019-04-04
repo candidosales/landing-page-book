@@ -168,17 +168,18 @@ h3 {
 
 button.button-buy,
 a.button-buy {
-    padding: $global-gutter * 2 $global-gutter * 6;
-    font-size: 18px;
+    padding: $global-gutter * 2 $global-gutter * 8;
+    font-size: 24px;
     font-weight: bold;
     background: $color-green;
     color: #fff !important;
-    border-radius: $global-radius;
+    border-radius: $global-radius * 5;
     width: fit-content;
     display: block;
     cursor: pointer;
-    margin: $global-gutter * 4 auto;
+    margin: $global-gutter * 4 auto $global-gutter auto;
     line-height: 1.5;
+    transition: all ease 0.3s;
     &:hover {
         @include rainbow;
         animation-duration: 3.5s;
@@ -261,6 +262,21 @@ footer {
     border-radius: $global-radius;
     text-align: center;
     margin-bottom: $global-gutter * 2;
+    transition: all ease 0.3s;
+    .fas {
+        font-size: 100px;
+        margin-top: $global-gutter;
+        border-radius: $global-radius * 2;
+    }
+    &:hover {
+        box-shadow: 0px 4px 15px #00000052;
+        .fas {
+            @include rainbow;
+            animation-duration: 3.5s;
+            box-shadow: 0px 4px 15px #00000052;
+            text-decoration: none;
+        }
+    }
 }
 
 .box-buy__title {
