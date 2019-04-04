@@ -18,7 +18,7 @@ $color-green: #5bb249;
 $color-blue: #5d63ac;
 $color-purple: #b85098;
 
-// Mixins
+
 @keyframes slide {
     0% {
         background-position-x: 0%;
@@ -29,6 +29,16 @@ $color-purple: #b85098;
     }
 }
 
+@keyframes slidebg {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 600vw;
+    }
+}
+
+// Mixins
 @mixin rainbow() {
     background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0, 255, 0) 14.28%, rgb(0, 255, 255) 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
     background-size: 600vw 600vw;
@@ -83,29 +93,10 @@ h3 {
     flex-grow: 1;
     position: absolute;
     bottom: 0;
+    background-image: linear-gradient(90deg, $color-red 0%, $color-orange 20%, $color-yellow 40%, $color-green 60%, $color-blue 80%, $color-purple 90%, $color-red 100%);
 
-    .rainbow-red {
-        background: $color-red;
-    }
-
-    .rainbow-orange {
-        background: $color-orange;
-    }
-
-    .rainbow-yellow {
-        background: $color-yellow;
-    }
-
-    .rainbow-green {
-        background: $color-green;
-    }
-
-    .rainbow-blue {
-        background: $color-blue;
-    }
-
-    .rainbow-purple {
-        background: $color-purple;
+    &:hover {
+        animation: slidebg 10s linear infinite;
     }
 }
 
@@ -188,7 +179,6 @@ a.button-buy {
     cursor: pointer;
     margin: $global-gutter * 4 auto;
     line-height: 1.5;
-
     &:hover {
         @include rainbow;
         animation-duration: 3.5s;
