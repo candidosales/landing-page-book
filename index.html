@@ -71,25 +71,17 @@
                                     <div class="box-buy">
                                         <p class="box-buy__title">Livro Físico</p>
                                         <i class="fas fa-book"></i>
-                                        <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
-                                        <form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
-                                            <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-                                            <input type="hidden" name="code" value="F455E8FB5E5E9C77747DCFAA380C96A3" />
+                                        <!-- INICIO FORMULARIO BOTAO PAGSEGURO --
+                                        <form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post">
+                                            !-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO --
+                                            <input type="hidden" name="code" value="1B4D0CA3C6C663ACC4F2AF91DEAEC9C1" />
                                             <input type="hidden" name="iot" value="button" />
                                             <button class="button-buy" type="submit" name="submit">Comprar</button>
                                             <p class="button-buy__description">R$ 30 + R$ 10 Frete</p>
-                                            <!-- <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-laranja-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" /> -->
-                                        </form>
-                                        <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
-                                        <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
-                                        <!--
-                                            Paypal
-                                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                            <input type="hidden" name="cmd" value="_s-xclick">
-                                            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-                                            <button class="button-buy" type="submit" name="submit">Comprar</button>
-                                            <p class="button-buy__description">R$ 30 + Frete</p>
+                                            !-- <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-laranja-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" /> --
                                         </form> -->
+                                        <a class="button-buy" href="https://pag.ae/7V9wFbD9r" target="_blank">Comprar</a>
+                                        <p class="button-buy__description">R$ 30 + R$ 10 Frete</p>
                                        </div>
                                 </div>
                             </div>
