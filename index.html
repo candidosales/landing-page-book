@@ -80,8 +80,18 @@
                                             <p class="button-buy__description">R$ 30 + R$ 10 Frete</p>
                                             !-- <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-laranja-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" /> --
                                         </form> -->
-                                        <a class="button-buy" href="https://pag.ae/7V9wFbD9r" target="_blank">Comprar</a>
-                                        <p class="button-buy__description">R$ 30 + R$ 10 Frete</p>
+                                        <!-- <a class="button-buy" href="https://pag.ae/7V9wFbD9r" target="_blank">Comprar</a>
+                                        <p class="button-buy__description">R$ 30 + R$ 10 Frete</p> -->
+
+                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="8HPJJ52HETEAE">
+                                            <!-- <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
+                                            <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1"> -->
+                                            <button class="button-buy" type="submit" name="submit">Comprar</button>
+                                            <p class="button-buy__description">R$ 30 + R$ 10 Frete</p>
+                                        </form>
+
                                        </div>
                                 </div>
                             </div>
