@@ -2,6 +2,8 @@
 
 Landing page for advertising and sales of books to independent authors
 
+## Preview
+
 ![./demo.gif](./demo.gif)
 
 - [Cores Sob Nossas Peles](https://coressobnossaspeles.com/)
