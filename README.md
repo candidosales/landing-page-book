@@ -70,6 +70,7 @@ Install npm dependencies
 ```
 
 Run the kickstart command
+
 ```sh
 npm run kickstart
 ```
@@ -89,6 +90,7 @@ npm run build
 ```
 
 To preview the production build
+
 ```sh
 npm run preview
 ```
