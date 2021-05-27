@@ -1,67 +1,39 @@
-<img alt="Webpack Starter Basic Loo" src="https://github.com/lifenautjoe/webpack-starter-basic/blob/master/src/assets/logo-on-dark-bg.png?raw=true" width="250">
+# Landing Page Book
 
-# webpack-starter-basic
-[![forthebadge](http://forthebadge.com/images/badges/fo-real.svg)](http://forthebadge.com)[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+Landing page for advertising and sales of books to independent authors
 
-[![dependencies](https://david-dm.org/lifenautjoe/webpack-starter-basic.svg)](https://david-dm.org/lifenautjoe/webpack-starter-basic)
+## Preview
 
-A simple **webpack 4 starter project** for your basic web development needs.
+![./demo.gif](./demo.gif)
 
-Read more on the [demo website](https://lifenautjoe.github.io/webpack-starter-basic/) or continue reading below.
+- [Cores Sob Nossas Peles](https://coressobnossaspeles.com/)
 
 ## Table of Contents
 
-- [Motivation](#motivation)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Usage](#usage)
-- [FAQ](#faq)
-  * [When should I use this starter?](#when-should-i-use-this-starter)
-  * [Where's the common webpack config?](#wheres-the-common-webpack-config)
-  * [How to load fonts](#how-to-load-fonts)
-  * [How to load images](#how-to-load-images)
-    + [In JavaScript](#in-javascript)
-    + [In `index.html`](#in-indexhtml)
-  * [How to install bootstrap 4](#how-to-install-bootstrap-4)    
-- [Websites using this starter kit on the wild](#websites-using-this-starter-kit-on-the-wild)
 
-## Motivation
+## 🎯 Features
 
-I needed to make a plain ol' "drop your mail to stay updated of ongoing developments" page.
-
-I did not need anything fancy, no frontend framework, no unit testing, simply a **starter project that would let me use sass, ES6, load assets, add vendor prefixes, start a dev server, generate sourcemaps and optimize everything for production.**
-
-I looked around and all I found were heavily specialized and complicated webpack starter projects (`webpack-angular-starter`, `webpack-react-starter`, etc) that are so intertwined with plugins that stripping undesired functionality is almost impossible. 
-
-So I did this.
-
-## Features
-
-* Separated development and production webpack settings you can understand
-* Sass
-* ES6
-* Asset loading
-* CSS Vendor prefixing
-* Development server
-* Sourcemaps
-* Favicons generation
-* Production optimizations
-* Mobile browser header color
+- No framework
+- Separated development and production webpack settings you can understand
+- SASS
+- ES6
+- Asset loading
+- CSS Vendor prefixing
+- Development server
+- Sourcemaps
+- Favicons generation
+- Production optimizations
+- Mobile browser header color
+- Integrate with Google Analytics
 
 ## Requirements
 
-* [Node](https://nodejs.org) > 7.6
+- [Node](https://nodejs.org) > 10.3
 
-## Usage
-
-Substitute `PROJECT-NAME` for your project name.
-
-Clone the repository
-
-```sh
- git clone https://github.com/lifenautjoe/webpack-starter-basic PROJECT-NAME
- cd PROJECT-NAME
-```
+## ⚙️ Usage
 
 Install npm dependencies
 
@@ -70,6 +42,7 @@ Install npm dependencies
 ```
 
 Run the kickstart command
+
 ```sh
 npm run kickstart
 ```
@@ -89,263 +62,41 @@ npm run build
 ```
 
 To preview the production build
+
 ```sh
 npm run preview
 ```
 
-## FAQ
+## 📚 Reference
 
-### When should I use this starter?
+- Webpack Starter Basic: https://github.com/lifenautjoe/webpack-starter-basic
+- Dev Icons: https://github.com/devicons/devicon
+- React Icons: https://react-icons.github.io/react-icons/icons?name=ri
+- https://twitter.com/gontijodesign/status/1394624373823348737
+- https://dev.to/swyx/how-to-add-prettier-and-eslint-automation-to-a-react-codebase-2gk1
+- https://dev.to/actitime/how-to-build-a-great-developer-portfolio-examples-tools-bkj
 
-You should use this starter if any of the following are true:
+## 👍 Contribute
 
-* You want to make a static page. e.g. splash screen, onboarding screen, phaser game, threejs visualization, countdown.
-* You found no good starter kit for whatever you want to do and need a solid place to start from.
+If you want to say thank you and/or support the active development this project:
 
-**Please note**: If you are going to use a frontend framework like angular or react, you can of course add the required plugins and 
-configuration but it's normally complicated and quirky enough that it's highly recommended to use one of the existing 
-starter projects such as [react-webpack-babel](https://github.com/alicoding/react-webpack-babel) or for angular projects the [angular-cli](https://github.com/angular/angular-cli).
+1. Add a [GitHub Star](https://github.com/candidosales/landing-page-book/stargazers) to the project.
+2. Tweet about the project [on your Twitter](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fcandidosales%2Flanding-page-book&text=Dependencies%20report%20aims%20to%20help%20analyze%20the%20consistency%20of%20the%20dependencies%20in%20your%20company%27s%20frontend%20projects).
+3. Write a review or tutorial on [Medium](https://medium.com/), [Dev.to](https://dev.to/) or personal blog.
+4. Support the project by donating a [cup of coffee](https://buymeacoff.ee/candidosales).
 
-### Where's the common webpack config?
+## ☕ Supporters
 
-**There is none and that is good thing.**
+If you want to support Landing Page Book, you can ☕ [**buy a coffee here**](https://buymeacoff.ee/candidosales)
 
-The pattern creates unnecessary confusion over the setup, at the end the config will always be different across environments.
-People just put booleans everywhere on the common config to switch between these differing configuration options which is just awful to see and confusing for someone who's just starting on webpack.
+## ✨ Acknowledgment
 
-The only truly shared config between these files are the entry js point and the main html template.
+- [Joel Hernandez](www.lifenautjoe.com)
 
-### How to load fonts
+## Author
 
-If you don't support Opera Mini, browsers support the .woff format. Its newer version .woff2, is widely supported by modern browsers and can be a good alternative.
+- Cândido Sales - [@candidosales](https://twitter.com/candidosales)
 
-If you decide to use only this format you can load the fonts in a similar manner to images.
+## ⚠️ Copyright and license
 
-In your `webpack.dev.js` and `webpack.prod.js` add the following
-
-```js
-module.exports = {
-    // ..
-    module: {
-        rules: [
-            // ..
-            {
-                test: /\.woff$/,
-                loader: 'url-loader',
-                options: {
-                    // Limit at 50k. Above that it emits separate files
-                    limit: 50000,
-                    // url-loader sets mimetype if it's passed.
-                    // Without this it derives it from the file extension
-                    mimetype: 'application/font-woff',
-                    // Output below fonts directory
-                    name: './fonts/[name].[ext]',
-                },
-            }
-            // ..
-        ]
-    }
-    // ..
-};
-```
-
-And let's say your font is in the folder `assets` with the name `pixel.woff`
-
-You can add it and use it in `index.scss` as
-```scss
-@font-face {
-    font-family: "Pixel";
-    src: url('./../assets/pixel.woff') format('woff');
-}
-
-.body{
-    font-family: 'Pixel', sans-serif;
-}
-```
-
-If you would like to support all kinds of font types, remove the woff rule we previously added to `webpack.dev.js` and `webpack.prod.js` and add the following
-
-```js
-module.exports = {
-    // ..
-    module: {
-        rules: [
-            // ..
-            {
-                test: /\.(ttf|eot|woff|woff2)$/,
-                loader: 'file-loader',
-                options: {
-                    name: 'fonts/[name].[ext]',
-                },
-            }
-            // ..
-        ]
-    }
-    // ..
-};
-```
-
-And assuming you have your fonts in the directory `assets` with names `pixel.woff`, `pixel.ttf`, `pixel.eot` , etc.
-
-You can add it and use it in `index.scss` as
-```scss
-@font-face {
-    font-family: 'Pixel';
-    src: url('./../assets/pixel.woff2') format('woff2'),
-    url('./../assets/pixel.woff') format('woff'),
-    url('./../assets/pixel.eot') format('embedded-opentype'),
-    url('./../assets/pixel.ttf') format('truetype');
-    /* Add other formats as you see fit */
-}
-```
-
-### How to load images
-
-#### In JavaScript
-
-You can require an image from JavaScript like
-```js
-const myImage = require('./assets/icon.png');
-```
-
-If the image size in bytes is smaller than `8192`you, `myImage` will be a string with the encoded image path such as 
-```
-data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvaW1hZ2VzL3RpY2stQ3lydkhSdi5zdmciOw==
-```
-If the image size is larger than `8192` it will be a string with the url to the image such as 
-```
-src/assets/icon.png?hash=5b1f36bc41ab31f5b801
-```
-
-This limit is set so images like icons are not loaded through a request but you can force the loader to give you image urls always by doing the following but should not be necessary. The limit works 90% of the time.
-```js
-const myImage = require('!!url!/assets/icon.png');
-```
-
-#### In `index.html`
-
-If you would like to include an image on your `index.html` file, place the path of the image in a webpack require statement`<%= require(imagePath) %>`.
-
-```html
-  <img class="splash-title__img"
-                     src="<%= require('./src/assets/logo-on-dark-bg.png') %>"
-                     alt="webpack logo"></a>
-```
-
-### How to install Bootstrap 4
-
-
-**After the project has been kickstarted**
-
-Install bootstrap
-````sh
-npm install bootstrap@4 --save
-````
-
-Install bootstrap dependencies.
-````sh
-npm install popper.js --save
-npm install jquery --save
-````
-
-Replace the project `index.scss` with 
-
-````scss
-@import "~bootstrap/scss/bootstrap";
-````
-
-And replace the project `index.js` with
-````js
-require('./styles/index.scss');
-
-import PopperJs from 'popper.js';
-import jquery from 'jquery';
-
-
-jquery(()=>{
-    console.log('Hello jQuery + bootstrap 4!');
-});
-````
-
-To see it all come together, replace the index.html body tag with 
-
-````html
-<body>
-
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
-
-<main role="main" class="container">
-
-    <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-    </div>
-
-</main><!-- /.container -->
-</body>
-````
-
-Start the development server and `voilà`.
-
-```sh
-npm start
-```
-
-To build for production
-
-```sh
-npm run build
-```
-
-To preview the production build
-```sh
-npm run preview
-```
-
-
-
-## Websites using this starter kit on the wild
-
-* [Droppable library](https://github.com/lifenautjoe/droppable)
-* [Noel Event Emitter](https://github.com/lifenautjoe/noel)
-* [ChooseIT Wishbot](http://voeux2018.choosit.com/)
-* [Webpack Starter Basic](https://lifenautjoe.github.io/webpack-starter-basic/)
-* [Openbook Org](https://www.open-book.org/)
-
-Have a website online built with this starter kit and would like to add it to the list? Open an issue!
-
-
-___
-Author [Joel Hernandez](www.lifenautjoe.com)
-
+Code and documentation copyright 2020-2030 the [Authors](https://github.com/candidosales/landing-page-book/graphs/contributors) and Code released under the [MIT License](https://github.com/candidosales/landing-page-book/blob/master/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
