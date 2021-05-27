@@ -11,11 +11,11 @@
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/candidosales/landing-page-book/"
     },
     "keywords": [],
     "author": "Cândido Sales",
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url" : "https://github.com/candidosales/landing-page-book/issues",
     },
