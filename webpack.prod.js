@@ -4,7 +4,6 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin"); //installed via npm
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const buildPath = path.resolve(__dirname, "dist");
@@ -16,9 +15,7 @@ module.exports = {
         filename: "[name].[fullhash:20].js",
         path: buildPath,
     },
-    node: {
-        // fs: 'empty'
-    },
+    node: {},
     module: {
         rules: [
             {
@@ -134,19 +131,6 @@ module.exports = {
                     },
                 ],
             },
-            // minimizerOptions: [],
-
-            // cssProcessor: require('cssnano'),
-            // cssProcessorOptions: {
-            //     map: {
-            //         inline: false,
-            //     },
-            //     discardComments: {
-            //         removeAll: true
-            //     },
-            //     discardUnused: false
-            // },
-            // canPrint: true
         }),
     ],
 };

@@ -9,6 +9,7 @@ module.exports = {
         port: 8080,
         contentBase: path.join(__dirname, "dist"),
     },
+    node: {},
     module: {
         rules: [
             {
@@ -81,11 +82,6 @@ module.exports = {
             inject: true,
         }),
     ],
-    node: {
-        // fs: 'empty',
-        // Buffer: false,
-        // process: false
-    },
     resolve: {
         fallback: {
             fs: false,
