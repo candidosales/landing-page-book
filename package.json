@@ -17,9 +17,12 @@
     "author": "Cândido Sales",
     "license": "MIT",
     "bugs": {
-        "url" : "https://github.com/candidosales/landing-page-book/issues",
+        "url" : "https://github.com/candidosales/landing-page-book/issues"
     },
     "homepage": "",
+    "browserslist": [
+        "last 2 versions"
+    ],
     "dependencies": {
         "bootstrap": "^5.0.1",
         "normalize.css": "^8.0.1"

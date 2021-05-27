@@ -59,6 +59,7 @@ module.exports = {
                             // On development we want to see where the file is coming from, hence we preserve the [path]
                             name: "[path][name].[ext]?hash=[fullhash:20]",
                             limit: 8192,
+                            esModule: false,
                         },
                     },
                 ],
